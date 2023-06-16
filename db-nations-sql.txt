@@ -1,0 +1,7 @@
+-- Una query SQL che restituisca la lista di tutte le nazioni mostrando nome, id, nome della regione e nome del continente, ordinata per nome della nazione.
+
+SELECT n.name AS Nazione, n.country_id AS ID_Nazione, r.name AS Regione, c.name AS Continente
+FROM countries n
+INNER JOIN regions r ON n.region_id = r.region_id
+INNER JOIN continents c ON r.continent_id = c.continent_id
+ORDER BY n.name;
